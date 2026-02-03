@@ -1,0 +1,11 @@
+Estructura de un proyecto Maven:
+
+pom.xml -> Fichero principal de configuración del proyecto Maven
+
+src/
+ ├── main/
+ │   └── java/ -> Código fuente de la aplicación
+ └── test/
+     └── java/ -> Código fuente de las pruebas unitarias
+
+target/ -> Directorio generado automáticamente con los .class y resultados de la compilación y tests
