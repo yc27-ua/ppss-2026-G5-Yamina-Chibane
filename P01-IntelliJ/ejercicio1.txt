@@ -1,0 +1,19 @@
+EJERCICIO 1 – Fases PACKAGE e INSTALL
+
+1. Fase PACKAGE
+- Al ejecutar mvn package se ejecutan las fases del ciclo de vida por defecto hasta package.
+- La goal más importante es maven-jar-plugin:jar.
+- La fase package compila el código, compila los tests, ejecuta los tests y empaqueta el proyecto.
+- Se genera el artefacto simpleMavenProject-1.0-SNAPSHOT.jar.
+- El artefacto se genera en el directorio target/.
+
+2. Fase INSTALL
+- Al ejecutar mvn install se ejecutan todas las fases anteriores y además la goal install:install.
+- La fase install copia el artefacto generado en package al repositorio local Maven.
+- El artefacto se copia en:
+  ~/.m2/repository/ppss/P01/simpleMavenProject/1.0-SNAPSHOT/
+
+3. Utilidad del repositorio local Maven
+- Permite reutilizar el proyecto como dependencia en otros proyectos Maven.
+- Evita recompilar el proyecto cada vez.
+- Facilita la gestión automática de dependencias.
