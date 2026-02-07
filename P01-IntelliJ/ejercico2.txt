@@ -1,0 +1,40 @@
+EJERCICIO 2: Comportamientos especificados, programados y probados
+
+Método: fechaValida(dia, mes, año)
+
+--------------------------------------------------
+Comportamientos que pertenecen al conjunto S
+(Comportamientos especificados)
+--------------------------------------------------
+
+S1: (29, 2, 2024) → true
+Justificación: 2024 es año bisiesto, febrero puede tener 29 días.
+
+S2: (29, 2, 2023) → false
+Justificación: 2023 no es año bisiesto, febrero no puede tener 29 días.
+
+S3: (31, 4, 2024) → false
+Justificación: abril tiene 30 días, no puede tener 31.
+
+--------------------------------------------------
+Comportamientos que pertenecen al conjunto P
+(Comportamientos programados)
+--------------------------------------------------
+
+P1: (31, 1, 2024) → true
+Resultado real: el método devuelve true porque enero tiene 31 días.
+
+P2: (30, 2, 2024) → false
+Resultado real: el método devuelve false porque febrero no puede tener 30 días.
+
+--------------------------------------------------
+Comportamientos que pertenecen al conjunto T
+(Comportamientos probados – casos de prueba)
+--------------------------------------------------
+
+T1: (29, 2, 2024) → true
+T2: (29, 2, 2023) → false
+T3: (31, 4, 2024) → false
+T4: (30, 6, 2024) → true
+T5: (31, 12, 2024) → true
+
