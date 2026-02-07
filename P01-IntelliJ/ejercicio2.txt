@@ -1,0 +1,148 @@
+Pregunta 1 :Indica qué secuencia de fases Maven del ciclo de vida por defecto es correcta (solo importa el orden).
+
+Opciones:
+
+a) compile test-compile package test
+b) compile package test-compile test install
+c) compile test package install
+d) clean compile test-compile test
+
+✅ RESPUESTA CORRECTA:
+
+c) compile → test → package → install
+
+Porque enn el ciclo de vida por defecto el orden correcto es: 
+
+compile → test → package → install
+
+test-compile siempre va antes de test
+
+clean NO pertenece al ciclo de vida por defecto
+
+
+
+Pregunta 2: Cualquier librería requerida en el proceso de construcción de un proyecto Maven:
+
+Opciones:
+
+a) Se descarga en target
+b) Se busca en el repositorio local
+c) Se busca en $HOME/.m2
+d) Todas son falsas
+
+RESPUESTA CORRECTA:
+
+c) Se busca en el directorio $HOME/.m2
+
+Porque el repositorio local Maven está en: $HOME/.m2/repository
+
+target es solo para artefactos generados
+
+Maven primero busca en local, luego en remoto
+
+🔹 CUESTIÓN PRÁCTICA 
+
+Se nos dan los siguientes ficheros en un proyecto Maven creado en $HOME:
+
+ExamenPPSS-1.0-SNAPSHOT.jar
+Parcial1.java
+Parcial1Test.java
+Parcial1.class
+Parcial1Test.class
+ppss.Parcial1Test.txt
+TEST-ppss.Parcial1Test.xml
+pom.xml
+
+a) ¿Cuál es el artifactId del proyecto?
+RESPUESTA: ExamenPPSS
+
+Porque:
+
+El nombre del .jar es:
+
+ExamenPPSS-1.0-SNAPSHOT.jar
+
+
+El formato es:
+
+artifactId-version.jar
+
+b) Ruta relativa desde $HOME de cada fichero
+RESPUESTA (estructura correcta):
+$HOME/
+└── proyecto/
+    ├── pom.xml
+    ├── src/
+    │   ├── main/
+    │   │   └── java/
+    │   │       └── ppss/
+    │   │           └── Parcial1.java
+    │   └── test/
+    │       └── java/
+    │           └── ppss/
+    │               └── Parcial1Test.java
+    └── target/
+        ├── ExamenPPSS-1.0-SNAPSHOT.jar
+        ├── classes/
+        │   └── ppss/
+        │       └── Parcial1.class
+        ├── test-classes/
+        │   └── ppss/
+        │       └── Parcial1Test.class
+        └── surefire-reports/
+            ├── ppss.Parcial1Test.txt
+            └── TEST-ppss.Parcial1Test.xml
+
+c) ¿Desde qué carpeta se ejecutan los comandos Maven?
+
+Desde la carpeta que contiene el fichero pom.xml
+
+Porque:
+
+Maven siempre se ejecuta desde el directorio raíz del proyecto
+
+d) Ficheros que se crean al ejecutar los comandos
+d.1) mvn clean test
+
+(Parcial1Test.java tiene errores de compilación)
+ 
+RESPUESTA: Se elimina el directorio target
+
+NO se genera ningún .class
+
+NO se ejecutan tests
+
+El proceso termina en BUILD FAILURE
+
+d.2) mvn clean test
+
+(Errores corregidos)
+
+✅ RESPUESTA:
+
+Se crean:
+
+target/classes/ppss/Parcial1.class
+
+target/test-classes/ppss/Parcial1Test.class
+
+target/surefire-reports/ppss.Parcial1Test.txt
+
+target/surefire-reports/TEST-ppss.Parcial1Test.xml
+
+Resultado: BUILD SUCCESS
+
+d.3) mvn package
+RESPUESTA:
+
+Se crea:
+
+target/ExamenPPSS-1.0-SNAPSHOT.jar
+
+d.4) mvn install
+RESPUESTA:
+
+Se copia el .jar a:
+
+$HOME/.m2/repository/<groupId>/ExamenPPSS/1.0-SNAPSHOT/ExamenPPSS-1.0-SNAPSHOT.jar
+
