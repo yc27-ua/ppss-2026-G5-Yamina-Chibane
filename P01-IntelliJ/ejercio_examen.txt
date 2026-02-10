@@ -7,7 +7,7 @@ b) compile package test-compile test install
 c) compile test package install
 d) clean compile test-compile test
 
-✅ RESPUESTA CORRECTA:
+RESPUESTA CORRECTA:
 
 c) compile → test → package → install
 
@@ -118,7 +118,7 @@ d.2) mvn clean test
 
 (Errores corregidos)
 
-✅ RESPUESTA:
+RESPUESTA:
 
 Se crean:
 
