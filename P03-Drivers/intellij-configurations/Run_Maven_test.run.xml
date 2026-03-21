@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run_Maven_test" type="MavenRunConfiguration" factoryName="Maven">
+    <option name="pomFilePath" value="$PROJECT_DIR$/pom.xml" />
+    <option name="goal" value="test" />
+    <option name="workingDirectory" value="$PROJECT_DIR$" />
+  </configuration>
+</component>

@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run_FicheroTextoTest_sin_excluidos" type="JUnit" factoryName="JUnit">
+    <module name="drivers" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="TEST_CLASS" value="ppss.FicheroTextoTest" />
+  </configuration>
+</component>
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run_FicheroTextoTest_sin_excluidos" type="JUnit" factoryName="JUnit">
+    <module name="drivers" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="TEST_CLASS" value="ppss.FicheroTextoTest" />
+  </configuration>
+</component>

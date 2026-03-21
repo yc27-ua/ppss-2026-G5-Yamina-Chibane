@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run_no_parametrizados_o_tablaB" type="JUnit" factoryName="JUnit">
+    <module name="drivers" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="TEST_CLASS" value="ppss.NoParametrizadosTest" />
+  </configuration>
+</component>
